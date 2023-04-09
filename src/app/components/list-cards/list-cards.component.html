@@ -1,0 +1,11 @@
+<div *ngFor="let item of arr,let i = index">
+<p class="text-start ps-4 pt-6 lg:text-xl font-semibold">{{arr[i].title}}</p>
+<div class="flex overflow-x-scroll  gap-4" >
+  <div class="inline-flex pt-2 w-full ml-3" *ngFor="let item of arr[i]['vids']">
+    <div class="flex border rounded-lg flex-col h-40 w-32 lg:h-52 lg:w-44 border-gray-300 shadow-md">
+      <div class="relative w-full h-96">  <img class="rounded-lg absolute inset-0 w-full h-full object-coverr" [src]="item.image"></div> 
+      <p class="text-center h-20 w-full flex self-center justify-center items-center">{{item.subtitle}}</p>
+    </div>
+  </div>
+</div>
+</div>
